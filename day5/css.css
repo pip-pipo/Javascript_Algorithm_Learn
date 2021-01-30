@@ -1,0 +1,60 @@
+.mor{
+    border: none;
+    background: cyan;
+    color: darkblue;
+    width: 40%;
+    animation:morsal infinite ease 5000ms;
+}
+
+
+
+@keyframes morsal{
+    to{
+        background: rgb(48, 38, 38);
+    }
+    50%{
+        background: rgb(10, 36, 153);
+        width: 50%;
+        padding: 50px;
+    }
+    100%{
+        background: rgb(112, 10, 153);
+    }
+}
+
+
+#btn{
+    position: fixed;
+    bottom: 0;
+    word-wrap: break-word;
+    right: 0;
+    border: none;
+    outline-width: 0px;
+    color:rgb(6, 2, 27);
+    background: rgb(238, 236, 236);
+    font-size: 1.50rem;
+    padding: 20px;
+    width:calc(100% - 90%);
+    border-radius:999px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+#btn:hover{
+    box-shadow:0px 0px 20px aqua;
+}
+*{
+    margin: 0;
+    padding:0;
+}
+
+.div1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    width: 100%;
+    background:darkblue;
+    color: white;
+    font-size: 4rem;
+}
