@@ -1,24 +1,176 @@
+//all array methods
+// // filter,map,reduce,foreach,splice,slice,fill,includes,join
 
-const filterHere = ['morsalin'];
 
-const newFilterHere = filterHere.filter(items=>{
-    if(items>5|| typeof(items)!==Number){
-        return items
-    }else{
-        return 'Please enter Number'
+// const filterHere = ['morsalin'];
+
+// const newFilterHere = filterHere.filter(items => {
+//     if (items > 5 || typeof (items) !== Number) {
+//         return items
+//     } else {
+//         return 'Please enter Number'
+//     }
+// })
+// console.log(typeof (filterHere));
+// console.log(newFilterHere);
+
+
+// const arr = new Array();
+
+// console.log(typeof (arr));
+
+// const filterAllsimilarNumber = [1, 2, 2, 2, 3, 4, 5, 5, 5, 4, 3, 2, 1, 7, 5, 6, 3, 2, 1];
+
+// const newFilterAllSimilarNumbers = filterAllsimilarNumber.filter((value, index, arr) => {
+//     return arr.indexOf(value) === index;
+// })
+// console.log(newFilterAllSimilarNumbers);
+
+// let numberArr = [2, 3, 4, 5, 6, 7, 7, 7];
+
+// const nums = numberArr.filter((value, index, arr) => {
+//     return arr.indexOf(value) === index;
+// })
+// console.log(nums);
+
+// const datasVal = [1, 2, 3, 4, 5, 6, 7, 8, 9, 45, 45, 5, 54, 5, 45, 45, 3, 2, 2, 1,];
+
+// console.log(datasVal.indexOf());
+// const newDatasVal = datasVal.filter((value, index, arr) => {
+//     console.log(value > 5);
+
+//     return arr.indexOf(value) === index;
+// })
+
+// console.log(newDatasVal);
+
+
+
+// // //     calbacknested(b)
+// // //     function calbacknested(b){
+// // //         return console.log(b)
+// // //     }
+// // // }
+// // // console.log(calback('morsalin'));
+
+
+// // // const stringdata = 'morsalin'
+
+
+// // // console.log(stringdata.indexOf('s') === 3);
+
+// // const allNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+// // const getTotal = allNumber.reduce((previousValue, currentValue, currentIndex, array) => {
+
+// //     console.log(previousValue + currentValue);
+
+// // }, 0)
+
+
+
+// // const allNumbers = allNumber.reduce((total, value, index) => {
+// //     console.log(index + index)
+// //     return total + value;
+// // }, 0);
+// // console.log(allNumbers);
+
+
+
+
+// // const getTotals = allNumber.reduce(calback, -Infinity);
+
+
+// // function calback(total,value,index,arr){
+// //         return total + value;
+// // }
+// // console.log(getTotals);
+
+// // console.log(-Infinity);
+
+
+const items = [
+    {
+        price: "3000"
+    },
+    {
+        price: "6000"
     }
-})
-console.log(typeof(filterHere));
-console.log(newFilterHere);
+    , {
+        price: "5000"
+    },
+    {
+        price: "4000"
+    }]
+// const getTotalPrice = items.reduce((previousValue, currentValue) => {
+//    console.log(previousValue = currentValue.price * currentValue.value);
+//     return  currentValue.price
 
 
-const arr = new Array();
+// }, 0)
 
-console.log(typeof(arr));
+// console.log(getTotalPrice);
 
-const filterAllsimilarNumber = [1,2,2,2,3,4,5,5,5,4,3,2,1,7,5,6,3,2,1];
 
-const newFilterAllSimilarNumbers = filterAllsimilarNumber.filter((value,index,arr)=>{
-    return arr.indexOf(value) === index;
-})
-console.log(newFilterAllSimilarNumbers);
+const Totals = items.reduce((acc,item)=> acc+item.vlaue * item.price,0);
+console.log(Totals)
+
+
+const array  = ['morsalin','koi','how are you'];
+
+console.log(array.slice(1,3));
+
+console.log(array.splice(-4));
+
+
+console.log(array);
+
+const arraysplice = [2,3,43,43,44,3];
+
+console.log(arraysplice.splice(-5,1,5555555));
+console.log(arraysplice.slice(-3));
+console.log(arraysplice);
+
+
+const a = ['a','morsalin','b','rakin'];
+
+const b = ['c','foridul','d','mannnah'];
+const d = ['e','emran','f','saikot']
+const c = a.concat(b,d,a,b,d,a);
+
+console.log(c)
+
+const numbersDatas= [1,2,3,4,5,6,7];
+
+console.log(numbersDatas.fill(7,2,6))
+
+function arrayDatas(arr){
+    return arr.fill(0,2,8)
+}
+console.log(arrayDatas([1,2,3,4,5,6,7,3,4,5]))
+
+
+function makenumbers(n){
+
+    // return Array(n)
+    // .fill(0)
+    // .map((_,index)=>index+1)
+    const arr = Array(n);
+   const newarr= arr.fill(0).map((_,index)=>index+1)
+    return newarr
+
+}
+
+console.log(makenumbers(29))
+
+
+
+const itemsM = ['morsalin','Imran','true','morsalin'];
+
+console.log(itemsM.includes("morsalin",4))
+
+const countries = ['bangladesh','pakistan','japan','butan','nepal'];
+
+const res = countries.join('$');
+
+console.log(res)
