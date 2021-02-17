@@ -110,6 +110,8 @@ const integetNumber = Number(numbers1);
 
 console.log(integetNumber);
 
+const main = "hello";
 
 
-
+const data = morsalin;
+const data = morsalin;
